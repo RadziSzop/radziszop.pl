@@ -16,7 +16,7 @@ fetch("https://api.mcsrvstat.us/2/130.61.25.233:25565")
             ipStatus.textContent = apiData.ip
             versionStatus.textContent = apiData.version
             onlineStatus.style.backgroundColor = "green";
-            // console.log(apiData.players.list)
+            playersStatus.textContent = `${apiData.players.online}/${apiData.players.max}`
             for(let i = 0; i < apiData.players.list.length; i++ )
             {
                 let playerOnList = document.createElement("p")
@@ -25,7 +25,7 @@ fetch("https://api.mcsrvstat.us/2/130.61.25.233:25565")
                 playerStatus.appendChild(playerOnList)
             }
 
-            playersStatus.textContent = `${apiData.players.online}/${apiData.players.max}`
+            
         }
         else{
             onlineStatus.textContent = "Offline"
