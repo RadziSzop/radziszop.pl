@@ -8,12 +8,7 @@ body {
   padding: 0;
 }
 body {
-  background: rgb(84, 84, 84);
-  background: linear-gradient(
-    34deg,
-    rgb(58, 58, 58) 0%,
-    rgba(66, 66, 66, 1) 100%
-  );
+  background-image: linear-gradient(to top, #62a0c4 0%, #bac8e0 100%);
   height: 100vh;
   display: flex;
 }
@@ -24,6 +19,7 @@ section {
 h1 {
   text-align: center;
   margin-top: 15px;
+  font-size: 3rem;
 }
 h2 {
   font-size: 2.5rem;
@@ -34,10 +30,9 @@ p {
 .container {
   width: 65%;
   height: 70%;
-  background-color: rgb(49, 49, 49);
+  background-color: rgb(54, 57, 63);
   margin: auto;
-  border-radius: 30px;
-  border: 10px solid rgb(43, 43, 43);
+  border-radius: 12px;
 }
 .main-content {
   color: white;
@@ -46,6 +41,30 @@ p {
 }
 .player-list {
 }
+
 .server {
   display: flex;
+}
+.online-status {
+  border-radius: 6px;
+  padding: 4px;
+}
+.blacbg {
+  background-color: rgb(65, 65, 65);
+  border-radius: 5px;
+  padding: 3px;
+  font-weight: 700;
+}
+.copyButton {
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color, transform 0.175s;
+  background-color: rgb(65, 65, 65);
+}
+.copyButtonClick {
+  background-color: rgb(53, 53, 53);
+  transform: scale(1.05);
+}
+.player-status {
+  font-size: 1.5rem;
 }
